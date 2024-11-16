@@ -1,0 +1,354 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8cd20;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button {
+    background-color: #ffb703;
+    color: #333;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.hero:hover .cta-button {
+    background-color: #ff8c00;
+}
+
+.logo-left {
+    width: 100px;
+}
+
+.logo-right {
+    width: 300px;
+    position: absolute;
+    left: 23%;
+    transform: translateX(-50%);
+}
+
+/* Navigation Menu */
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #f8cd20;
+    border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.service {
+    text-align: center;
+    width: 200px;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    color: #555;
+}
+
+/* Full-Sized Image */
+.full-image-img {
+    width: 100%;
+    display: block;
+}
+
+/* Categories Section */
+.categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background-color: #000;
+    color: white;
+}
+
+.category {
+    width: 30%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-images {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.category-images img {
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s;
+}
+
+.category-images img:hover {
+    transform: scale(1.05);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Product Section */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0rem 2rem;
+}
+
+.product-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.advance {
+    color: #0070f3;
+}
+
+.description {
+    color: #555;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .product-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Options */
+.contact-options {
+    display: flex;
+    flex-direction: column;  /* Stack buttons vertically */
+    /*   align-items: center;      Center the buttons horizontally */
+    gap: 20px;               /* Space between buttons */
+    margin-top: 0px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.contact-button img.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-button.whatsapp {
+    background: #25d366; /* WhatsApp green */
+}
+
+.contact-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+/* Phone Number Styling */
+.phone-number {
+    font-size: 1rem;
+    color: black; /* Set the color to black */
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.phone-number:hover {
+    text-decoration: underline;
+}
+
+.phone-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+/* Promo Banner Styling */
+.promo-banner {
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.promo-banner p {
+    margin: 0;
+    padding: 0;
+}
+
+.promo-banner strong {
+    color: #d35400;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #f8cd20;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f8cd20;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    color: #aaa;
+}
